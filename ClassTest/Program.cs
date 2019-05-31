@@ -27,14 +27,15 @@ namespace ClassTest
             Console.WriteLine("Class Animal");
             Console.WriteLine("=======================");
 
-            Animal fox = new Animal("fox", "Raaww");
-            fox.MakeSound();
+            List<Animal> animals = new List<Animal>();
+            animals.Add(new Animal("fox", "Raaww"));
+            animals.Add(new Animal("dog", "Walwal"));
+            animals.Add(new Animal("cat", "nyaong"));
 
-            Animal dog = new Animal("dog", "Walwal");
-            dog.MakeSound();
-
-            Animal cat = new Animal("cat", "nyaong");
-            cat.MakeSound();
+            foreach(var animal in animals)
+            {
+                animal.MakeSound();
+            }
 
             Console.WriteLine("numOfAnimals : {0}", Animal.GetNumOfAnimals());
             Console.WriteLine(String.Empty);
