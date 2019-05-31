@@ -10,7 +10,9 @@ namespace ClassTest
     {
         static void Main(string[] args)
         {
-            /*
+            Console.WriteLine("Struct");
+            Console.WriteLine("=======================");
+
             Rectangle rect1;
             rect1.length = 100;
             rect1.width = 30;
@@ -20,7 +22,10 @@ namespace ClassTest
             Rectangle rect2 = new Rectangle(200, 50);
             Console.WriteLine("rectangle length:{0}, width:{1}, area:{2}",
                 rect1.length, rect1.width, rect1.Area());
-            */
+            
+            Console.WriteLine(String.Empty);
+            Console.WriteLine("Class Animal");
+            Console.WriteLine("=======================");
 
             Animal fox = new Animal("fox", "Raaww");
             fox.MakeSound();
@@ -31,7 +36,13 @@ namespace ClassTest
             Animal cat = new Animal("cat", "nyaong");
             cat.MakeSound();
 
-            //Animal.GetNumOfAnimals();
+            Console.WriteLine("numOfAnimals : {0}", Animal.GetNumOfAnimals());
+            Console.WriteLine(String.Empty);
+            Console.WriteLine("ShapeMath");
+            Console.WriteLine("=======================");
+            Console.WriteLine("Area of Rectangle : {0}", ShapeMath.GetArea("rectangle", 5, 6));
+            Console.WriteLine("Area of Triangle : {0}", ShapeMath.GetArea("triangle", 5, 6));
+            Console.WriteLine("Area of Circle : {0}", ShapeMath.GetArea("circle", 5));
 
             Console.ReadLine();
         }
