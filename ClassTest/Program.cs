@@ -40,9 +40,10 @@ namespace ClassTest
             Console.WriteLine(String.Empty);
             Console.WriteLine("ShapeMath");
             Console.WriteLine("=======================");
-            Console.WriteLine("Area of Rectangle : {0}", ShapeMath.GetArea("rectangle", 5, 6));
-            Console.WriteLine("Area of Triangle : {0}", ShapeMath.GetArea("triangle", 5, 6));
-            Console.WriteLine("Area of Circle : {0}", ShapeMath.GetArea("circle", 5));
+
+            Console.WriteLine("Area of Rectangle : {0}", ShapeMath.GetArea(enShape.Rectangle, 5, 6));
+            Console.WriteLine("Area of Triangle : {0}", ShapeMath.GetArea(enShape.Triangle, 5, 6));
+            Console.WriteLine("Area of Circle : {0}", ShapeMath.GetArea(enShape.Circle, 5));
 
             Console.ReadLine();
         }
