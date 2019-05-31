@@ -31,6 +31,8 @@ namespace ClassTest
             Animal cat = new Animal("cat", "nyaong");
             cat.MakeSound();
 
+            //Animal.GetNumOfAnimals();
+
             Console.ReadLine();
         }
 
