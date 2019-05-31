@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClassTest
 {
+    public enum enAnimalType
+    {
+        fox,
+        dog,
+        cat,
+        tiger,
+        cow,
+        pig,
+    }
+
     class Animal
     {
         static int numOfAnimals = 0;
