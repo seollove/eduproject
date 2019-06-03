@@ -13,10 +13,8 @@ namespace ClassTest
         cat,
         tiger,
         cow,
-        pig
+        pig,
     }
-
-
 
     class Animal
     {
