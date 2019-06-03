@@ -32,9 +32,41 @@ namespace ClassTest
             animals.Add(new Animal("dog", "Walwal"));
             animals.Add(new Animal("cat", "nyaong"));
 
+            for(int i = 0; i < animals.Count; i++)
+            {
+                Animal thisAnimal = animals[i];
+            }
+
+            bool bFound = false;
             foreach(var animal in animals)
             {
-                animal.MakeSound();
+                var animalName = animal.GetName();
+                if (animalName == "pig")
+                {
+                    bFound = true;
+                    break;
+                }
+            }
+
+            if (bFound)
+            {
+                Console.WriteLine("pig found");
+            }
+            else
+            {
+                Console.WriteLine("pig not found");
+            }
+
+            Animal myPig = null;
+            myPig = animals.Find(item => item.GetName().Equals("pig"));
+            if (myPig != null)
+            {
+                Console.WriteLine("pig found");
+                myPig.MakeSound();
+            }
+            else
+            {
+                Console.WriteLine("pig not found");
             }
 
             Dictionary<enAnimalType, Animal> dicAnimals 
@@ -43,6 +75,8 @@ namespace ClassTest
             dicAnimals.Add(enAnimalType.fox, new Animal("red", "Raaww"));
             dicAnimals.Add(enAnimalType.dog, new Animal("blue", "walwal"));
             dicAnimals.Add(enAnimalType.cat, new Animal("pink", "nyaong"));
+
+            var someAnimal = dicAnimals[enAnimalType.cat];
 
             foreach(KeyValuePair<enAnimalType, Animal> item in dicAnimals)
             {
